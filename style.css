@@ -57,7 +57,7 @@ header {
 /* stylizacja sekcji navigacji*/
 
 nav {
-    background-color: rgba(250, 235, 22, 0.4);
+    background-color: rgba(213, 111, 1, 1);
     padding: 10px;
 }
 
@@ -162,13 +162,13 @@ nav a {
 }
 
 .text-container {
-    order: 2; /* Ustawienie kolejności dla tekstu */
+    order: 2;
 }
 
 .button-container {
     text-align: center;
-    margin-top: 20px; /* dostosuj margines do własnych preferencji */
-    order: 1; /* Ustawienie kolejności dla przycisków */
+    margin-top: 20px;
+    order: 1;
 }
 
 #history p {
@@ -302,7 +302,7 @@ nav a {
 .prev-btn,
 .next-btn {
     cursor: pointer;
-    background-color: #4CAF50;
+    background-color: #b63f27;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -311,7 +311,7 @@ nav a {
 
 .prev-btn:hover,
 .next-btn:hover {
-    background-color: #45a049;
+    background-color: #bb0300;
 }
 
 /* Stylizacja sekcji menagment*/
