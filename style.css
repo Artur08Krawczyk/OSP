@@ -1,0 +1,670 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+/* Stylizacja sekcji header*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-left: 10px;
+}
+
+/* Stylizacji sekcji top*/
+
+#scrollToTopBtn {
+    position: fixed;
+    right: 20px;
+    bottom: -40px;
+    background-color: #8f0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: bottom 0.3s ease-in-out;
+}
+
+#scrollToTopBtn.show {
+    bottom: 20px;
+}
+
+/* stylizacja sekcji navigacji*/
+
+nav {
+    background-color: rgba(250, 235, 22, 0.4);
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 10px;
+    position: relative;
+    font-size: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.flex-grow {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Stylizacja sekcji vision-mission*/
+
+#vision-mission-container {
+    position: relative;
+    height: 250px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.vision-mission-container img {
+    width: 100%;
+    height: auto;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.vision-mission-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.vision-mission-text h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stylizacja sekcji history*/
+
+#history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.text-container {
+    order: 2; /* Ustawienie kolejności dla tekstu */
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px; /* dostosuj margines do własnych preferencji */
+    order: 1; /* Ustawienie kolejności dla przycisków */
+}
+
+#history p {
+    font-size: 16px;
+    text-align: left;
+}
+
+#history h2 {
+    text-align: center;
+}
+
+.image_history {
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.image_ff {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.yt-btn {
+    display: inline-block;
+    background-color: #d20000;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.yt-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.yt-btn:hover {
+    background-color: #c12700;
+}
+
+/* Stylizacja sekcji firefighters */
+
+#firefighters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+#firefighters p {
+    font-size: 16px;
+    text-align: left;
+}
+
+#firefighters h2 {
+    text-align: center;
+}
+
+.image_ff {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+/* Stylizacja sekcji equipment */
+
+#equipment {
+    padding: 20px;
+}
+
+#equipment h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.equipment-table {
+    width: 100%;
+}
+
+.equipment-table td {
+    vertical-align: top;
+    padding: 10px;
+    background-color: rgb(254, 248, 248);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.equipment-table h3 {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.equipment-table p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.image_eq {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.5s ease;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #45a049;
+}
+
+/* Stylizacja sekcji menagment*/
+
+.management-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.text_menagment {
+    text-align: center;
+    font-size: 28px;
+}
+  
+.management-item {
+    margin: 30px;
+    text-align: center;
+    width: 350px;
+    min-height: 250px;
+}
+  
+.management-item img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+  
+  .management-item h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+  .management-item p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Stylizacja sekcji GRM */
+
+#grm h2 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+
+#grm p {
+    text-align: left;
+}
+
+#grm_menagment h2 {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 36px;
+}
+
+.image_grm {
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+/*Stylizacja sekcji sponsor*/
+
+#sponsoring {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.sponsor-container {
+    display: flex;
+    justify-content: center;
+}
+
+.sponsor-item {
+    margin: 0 25px; 
+    margin-bottom: 35px;
+}
+
+.sponsor-item img {
+    display: block;
+}
+
+/* Stylizacja sekcji contact*/
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+  
+  .contact_text {
+    text-align: center;
+  }
+  .contact-item {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+  }
+  
+  .contact-item i {
+    font-size: 24px;
+    margin-right: 5px;
+  }
+  
+  .contact-item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+  }
+
+/* Styliacja sekcji footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* Dopasowanie modala */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: scale(1.2);
+}
+
+/* Dopasowanie responsywności witryny*/
+
+@media screen and (max-width: 600px) {
+    .logo img {
+        max-height: 80px;
+        margin-right: 5px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .flex-container {
+        padding: 5px;
+    }
+
+    #vision-mission-container {
+        height: 400px;
+    }
+
+    .vision-mission-text {
+        font-size: 16px;
+    }
+
+    #history h2, #firefighters h2, #equipment h2, #grm h2, #sponsoring h2, #contact h2 {
+        font-size: 24px;
+    }
+
+    .image_history, .image_ff {
+        max-width: 100%;
+    }
+
+    .image_eq {
+        max-width: 60%;
+    }
+
+    .equipment-item {
+        margin-bottom: 15px;
+    }
+
+    .management-item img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .management-item h3 {
+        font-size: 20px;
+    }
+
+    .management-item p {
+        font-size: 16px;
+    }
+
+    .image_grm {
+        max-width: 100%;
+    }
+
+    .sponsor-item img {
+        width: 100px;
+        height: auto;
+        max-height: 100px;
+        margin: 5px;
+    }
+
+    .contact-item i {
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    .contact-item p, .contact-item a, footer p {
+        font-size: 14px;
+    }
+}
+
+/* Media Query dla ekranów o szerokości 601 pikseli lub większej (tablety i większe) */
+
+@media screen and (min-width: 601px) {
+    .logo img {
+        max-height: 120px;
+        margin-right: 15px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0 10px;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        display: none;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .flex-container {
+        padding: 20px;
+    }
+
+    #vision-mission-container {
+        height: 250px;
+    }
+
+    .vision-mission-text {
+        font-size: 18px;
+    }
+
+    #history h2, #firefighters h2,#equipment h2, #grm h2, #sponsoring h2, #contact h2 {
+        font-size: 36px;
+    }
+
+    .image_history {
+        max-width: 100%;
+    }
+
+    .image_ff {
+        max-width: 90%;
+    }
+
+    .image_eq {
+        max-width: 20%;
+    }
+
+    .equipment-item {
+        margin-bottom: 30px;
+    }
+
+    .management-item img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    .management-item h3 {
+        font-size: 22px;
+    }
+
+    .management-item p {
+        font-size: 14px;
+    }
+
+    .image_grm {
+        max-width: 70%;
+    }
+
+    .sponsor-item img {
+        width: 150px;
+        height: auto;
+        max-height: 150px;
+        margin: 10px;
+    }
+
+    .contact-item i {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .contact-item p, .contact-item a, footer p {
+        font-size: 18px;
+    }
+}
